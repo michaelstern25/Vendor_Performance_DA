@@ -1,44 +1,46 @@
 # Vendor_Performance_DA
-This project focuses on analyzing vendor sales performance using exploratory data analysis, statistical methods, and visualization techniques to uncover patterns and opportunities for business improvement.
+This project focuses on analyzing vendor sales performance using exploratory data analysis, statistical methods, and visualization techniques to uncover patterns and opportunities for strategic business improvement.
 
 🔧 Tools & Technologies Used
+Python (Pandas, NumPy) – Data cleaning, aggregation, and statistical summarization
 
-Python (Pandas, NumPy) – Data cleaning, aggregation, statistical analysis
+Matplotlib & Seaborn – Visualizations and custom plots for trends and outliers
 
-Matplotlib & Seaborn – Data visualizations and plots
+Scipy Stats – Confidence intervals, t-tests, and hypothesis testing
 
-Scipy Stats – Confidence intervals and hypothesis testing
+Jupyter Notebook – Interactive, step-by-step analysis and business storytelling
 
-Jupyter Notebook – Interactive analysis and visual storytelling
-
-
-
----
+SQLite – Lightweight relational database for structured querying and joining datasets
 
 📈 Key Insights
-
 ✅ 1. Top vs. Low Performing Vendors (Confidence Interval Analysis)
 
-Using t-distribution-based confidence intervals, we compared Top Vendors and Low Vendors on profit margins.
+Used t-distribution-based confidence intervals to compare profit margins of top and low-performing vendors
 
-Top Vendors showed a higher mean profit margin with narrower confidence intervals, indicating consistent performance.
+Top Vendors: Showed higher average profit margins with narrower intervals, suggesting stable and efficient performance
 
-Low Vendors had lower mean margins and wider intervals, showing more variability and potential issues in pricing or strategy.
-
+Low Vendors: Had wider intervals and lower means, indicating inconsistency or possible pricing inefficiencies
 
 ✅ 2. Promotional Opportunity: Low Sales, High Margin Brands
 
-We identified brands with low total sales (bottom 15%) but high profit margins (top 15%) using scatter plots:
+Applied quantile-based segmentation to flag brands in the bottom 15% of sales but top 15% in profit margin
 
-These brands are high-margin but underperforming in volume.
+Identified high-margin but low-volume brands as strategic targets for marketing or pricing promotions
 
-They are perfect candidates for marketing campaigns or pricing adjustments to drive growth without sacrificing profitability.
-
+These brands can potentially boost overall revenue without compromising profitability
 
 ✅ 3. Visualizations & Plots
 
-Histogram with Confidence Intervals: Compared distributions of Top vs. Low vendors using KDE and CI bands.
+📌 Histogram with Confidence Intervals: Compared sales margin distributions of vendors using KDE curves + shaded CI
 
-Scatter Plot: Highlighted target brands for strategic focus using sales vs. profit margin mapping.
+📌 Scatter Plot: Visualized all brands vs. target brands using sales and profit margin; highlighted opportunity zones
 
-Threshold Lines: Added quantile-based cutoffs to clearly differentiate target groups.
+📌 Threshold Lines: Added sales and margin cutoffs using 15th and 85th percentiles for business clarity
+
+✅ 4. Database Integration with SQLite
+
+Structured .csv data was loaded and queried using SQLite for backend analysis
+
+Performed SQL joins on vendor, sales, and product tables before passing cleaned data to Python
+
+Helped in modularizing data sources, reducing memory usage, and improving overall data management
